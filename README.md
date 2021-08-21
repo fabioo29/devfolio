@@ -47,4 +47,4 @@ python manage.py livereload     # start server with auto-reload
 python manage.py runserver      # start django web app
 ```  
   
-### Deployed with heroku.com.
+### Deployed with heroku.com and Github actions.
