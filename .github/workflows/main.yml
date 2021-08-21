@@ -1,0 +1,17 @@
+on:
+  schedule:
+      # Runs every hour
+      - cron: '0 * * * *'
+    
+  push:
+    branches: [ main ]
+    
+jobs:  
+  build:
+    name: 'Avoid heroku website to idle'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Ping my site
+      uses: Leocardoso94/is-my-site-up@v1.2
+      with: 
+        site: 'https://fabioo29-devfolio.herokuapp.com/'
