@@ -103,7 +103,7 @@ def send_email(data):
     msg = MIMEText(email_content)
     msg["Subject"] = data["subject"]
     msg["From"] = SENDER
-    msg["To"] = ", ".join(TARGET)
+    msg["To"] = TARGET
 
     server = smtplib.SMTP_SSL(SMTP_SSL_HOST, SMTP_SSL_PORT)
     server.login(EMAIL, PASSWORD)
