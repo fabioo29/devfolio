@@ -1,36 +1,42 @@
 @font-face {
-  font-family: 'Agustina';
+  font-family: "Agustina";
   font-style: normal;
   font-weight: 400;
-  src: local('Agustina'), url('https://fonts.cdnfonts.com/s/29981/Agustina.woff') format('woff');
+  src: local("Agustina"),
+    url("https://fonts.cdnfonts.com/s/29981/Agustina.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Share Tech Mono';
+  font-family: "Share Tech Mono";
   font-style: normal;
   font-weight: 400;
-  src: local('Share Tech Mono'), url('https://fonts.cdnfonts.com/s/15739/ShareTechMono-Regular.woff') format('woff');
+  src: local("Share Tech Mono"),
+    url("https://fonts.cdnfonts.com/s/15739/ShareTechMono-Regular.woff")
+      format("woff");
 }
 
 @font-face {
-  font-family: 'Calibre';
+  font-family: "Calibre";
   font-style: normal;
   font-weight: 250;
-  src: local('Calibre'), url('https://fonts.cdnfonts.com/s/22257/CalibreThin.woff') format('woff');
+  src: local("Calibre"),
+    url("https://fonts.cdnfonts.com/s/22257/CalibreThin.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Calibre';
+  font-family: "Calibre";
   font-style: normal;
   font-weight: 500;
-  src: local('Calibre'), url('https://fonts.cdnfonts.com/s/22257/CalibreMedium.woff') format('woff');
+  src: local("Calibre"),
+    url("https://fonts.cdnfonts.com/s/22257/CalibreMedium.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'SF Mono';
+  font-family: "SF Mono";
   font-style: normal;
   font-weight: 400;
-  src: local('SF Mono'), url('https://fonts.cdnfonts.com/s/22256/SFMonoRegular.woff') format('woff');
+  src: local("SF Mono"),
+    url("https://fonts.cdnfonts.com/s/22256/SFMonoRegular.woff") format("woff");
 }
 
 :root {
@@ -49,12 +55,25 @@
 }
 
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 html,
 body {
   background-color: var(--clr-devfolio-background) !important;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
 }
 
 section {
@@ -70,7 +89,7 @@ nav {
   position: sticky !important;
   top: 0;
   left: 0;
-  box-shadow: rgb(0 0 0 / 56%) 0px 10px 20px 0px
+  box-shadow: rgb(0 0 0 / 56%) 0px 10px 20px 0px;
 }
 
 .navbar {
@@ -260,17 +279,35 @@ nav {
 }
 
 @keyframes icon-move1 {
-  0% {opacity: 0; transform: rotate(90deg) translateX(12vw) rotate(-90deg);}
-  30% {opacity: 0}
-  50% {opacity: 1}
-  100% {transform: rotate(270deg) translateX(12vw) rotate(-270deg);}
+  0% {
+    opacity: 0;
+    transform: rotate(90deg) translateX(12vw) rotate(-90deg);
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(270deg) translateX(12vw) rotate(-270deg);
+  }
 }
 
 @keyframes icon-move2 {
-  0% {opacity: 0; transform: rotate(90deg) translateX(12vw) rotate(-90deg);}
-  30% {opacity: 0}
-  50% {opacity: 1}
-  100% {transform: rotate(-90deg) translateX(12vw) rotate(90deg);}
+  0% {
+    opacity: 0;
+    transform: rotate(90deg) translateX(12vw) rotate(-90deg);
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-90deg) translateX(12vw) rotate(90deg);
+  }
 }
 
 .icon-move1 {
@@ -782,7 +819,6 @@ header > * {
 /* media queries */
 /* [xs] Extra small devices (phones) */
 @media only screen and (max-width: 600px) {
-  
   /* navbar */
 
   .navbar {
@@ -797,22 +833,24 @@ header > * {
   .navbar-toggler {
     font-size: 7vw;
   }
-  
-  .navbar-nav{
+
+  .navbar-nav {
     align-items: flex-end;
   }
 
-  .nav-text, .nav-num, .nav-resume {
+  .nav-text,
+  .nav-num,
+  .nav-resume {
     font-size: 4vw;
   }
 
-  .nav-item:last-child{
+  .nav-item:last-child {
     margin: 1.2em 0 0 0;
     width: 100%;
     text-align: center;
   }
 
-  .nav-resume{
+  .nav-resume {
     padding: 1em 0;
     margin: 0;
     border-left-width: 0px;
@@ -826,7 +864,8 @@ header > * {
     margin-left: 0;
   }
 
-  .float-bar-l, .float-bar-r {
+  .float-bar-l,
+  .float-bar-r {
     width: 4.2vh;
   }
 
@@ -838,21 +877,21 @@ header > * {
     left: 2.5vh;
   }
 
-  #welcome-container{
+  #welcome-container {
     align-items: center;
     margin-top: -30%;
     z-index: 2;
   }
 
-  #hello{
+  #hello {
     font-size: 17vw;
   }
 
-  #welcome{
+  #welcome {
     font-size: 2.7vw;
   }
 
-  #animated-text{
+  #animated-text {
     font-size: 5.5vw;
   }
 
@@ -866,24 +905,42 @@ header > * {
   }
 
   @keyframes icon-move1 {
-    0% {opacity: 0; transform: rotate(90deg) translateX(22vw) rotate(-90deg);}
-    30% {opacity: 0}
-    50% {opacity: 1}
-    100% {transform: rotate(270deg) translateX(22vw) rotate(-270deg);}
+    0% {
+      opacity: 0;
+      transform: rotate(90deg) translateX(22vw) rotate(-90deg);
+    }
+    30% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(270deg) translateX(22vw) rotate(-270deg);
+    }
   }
-  
+
   @keyframes icon-move2 {
-    0% {opacity: 0; transform: rotate(90deg) translateX(22vw) rotate(-90deg);}
-    30% {opacity: 0}
-    50% {opacity: 1}
-    100% {transform: rotate(-90deg) translateX(22vw) rotate(90deg);}
-  }  
+    0% {
+      opacity: 0;
+      transform: rotate(90deg) translateX(22vw) rotate(-90deg);
+    }
+    30% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-90deg) translateX(22vw) rotate(90deg);
+    }
+  }
 
   /* section */
   section {
     padding: 0 17% 15%;
   }
- 
+
   .projects {
     padding-bottom: 10%;
   }
@@ -905,7 +962,7 @@ header > * {
   }
 
   /* projects */
-  
+
   .container-click {
     display: block;
   }
@@ -917,12 +974,12 @@ header > * {
     flex-direction: column;
   }
 
-  .project-grid:nth-of-type(odd) > .project-img, 
-  .project-grid:nth-of-type(odd) > .color-overlay, 
+  .project-grid:nth-of-type(odd) > .project-img,
+  .project-grid:nth-of-type(odd) > .color-overlay,
   .project-grid:nth-of-type(odd) > .project-text,
-  .project-grid:nth-of-type(even) > .project-img, 
-  .project-grid:nth-of-type(even) > .color-overlay, 
-  .project-grid:nth-of-type(even) > .project-text  {
+  .project-grid:nth-of-type(even) > .project-img,
+  .project-grid:nth-of-type(even) > .color-overlay,
+  .project-grid:nth-of-type(even) > .project-text {
     grid-area: 1 / 1 / 31 / 31;
     margin: auto auto;
     text-align: center;
@@ -996,19 +1053,19 @@ header > * {
   .github-project > .project-tech {
     bottom: 0;
   }
-  
+
   .project-desc {
-    overflow:scroll;
-    overflow-x:hidden;
+    overflow: scroll;
+    overflow-x: hidden;
     z-index: 5;
   }
 
-  .project-desc::-webkit-scrollbar{
-    width:0;
-    background-color:transparent;
+  .project-desc::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
   }
 
-  .raise{
+  .raise {
     font-size: 3.5vw;
     padding: 1.5vw 2vw;
     border: 1px solid;
@@ -1047,7 +1104,6 @@ header > * {
 
 /* [m] Medium devices (landscape tablets) */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-
   /* navbar */
   .navbar-brand,
   .brand-font {
@@ -1057,22 +1113,24 @@ header > * {
   .navbar-toggler {
     font-size: 3vw;
   }
-  
-  .navbar-nav{
+
+  .navbar-nav {
     align-items: flex-end;
   }
 
-  .nav-text, .nav-num, .nav-resume {
+  .nav-text,
+  .nav-num,
+  .nav-resume {
     font-size: 2vw;
   }
 
-  .nav-item:last-child{
+  .nav-item:last-child {
     margin: 1.2em 0 0 0;
     width: 100%;
     text-align: center;
   }
 
-  .nav-item .nav-resume{
+  .nav-item .nav-resume {
     padding: 1em 0;
     margin: 0;
     border-left-width: 0px;
@@ -1099,7 +1157,6 @@ header > * {
 
 /* [l] Large devices (laptops/desktops) */
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-
   /* navbar */
   .navbar-brand,
   .brand-font {
@@ -1109,22 +1166,24 @@ header > * {
   .navbar-toggler {
     font-size: 3vw;
   }
-  
-  .navbar-nav{
+
+  .navbar-nav {
     align-items: flex-end;
   }
 
-  .nav-text, .nav-num, .nav-resume {
+  .nav-text,
+  .nav-num,
+  .nav-resume {
     font-size: 2vw;
   }
 
-  .nav-item:last-child{
+  .nav-item:last-child {
     margin: 1.2em 0 0 0;
     width: 100%;
     text-align: center;
   }
 
-  .nav-item .nav-resume{
+  .nav-item .nav-resume {
     padding: 1em 0;
     margin: 0;
     border-left-width: 0px;
@@ -1135,14 +1194,11 @@ header > * {
   #float-icons .icon {
     top: calc(39vw - 14vh);
   }
-
 }
 
 /* [xl] Extra large devices (large laptops, desktops, and TVs) */
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
-
   .icon {
     top: calc(35vw - 13vh);
   }
-
 }
