@@ -3,8 +3,6 @@ from django.shortcuts import render
 from main.models import Git_Project
 
 import os
-import sys
-import json
 import smtplib
 import requests
 
@@ -130,5 +128,7 @@ def index(request):
         mydict["feature_projects"][i].image.name = (
             "/static/assets/" + project.image.name
         )
+
+    mydict["github"] = GITHUB_USER
 
     return render(request, "main/index.html", mydict)
