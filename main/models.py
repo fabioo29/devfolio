@@ -7,7 +7,7 @@ class Git_Project(models.Model):
     topics = models.JSONField(blank=False, null=False)
     url = models.TextField(blank=False, null=False)
     featured = models.BooleanField("Featured project?",default=0, choices=[(True,'True'), (False,'False')])
-    image = models.ImageField()
+    image = models.TextField(blank=True, null=True)
 
     class Meta:
         verbose_name_plural = "Github_Archive"

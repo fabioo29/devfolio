@@ -91,14 +91,12 @@ def send_email(data):
         if not len(param):
             return False
 
-    email_content = """
-        Name: {}\n
-        Contact: {}\n
-        Email: {}\n\n
-        Message: {}
-    """.format(
-        data["name"], data["contact"], data["email"], data["message"]
-    )
+    email_content = f"""
+        Name: {data["name"]}\n
+        Contact: {data["contact"]}\n
+        Email: {data["email"]}\n\n
+        Message: {data["message"]}
+    """
 
     msg = MIMEText(email_content)
     msg["Subject"] = data["subject"]
@@ -123,11 +121,6 @@ def index(request):
         "repos_info": get_repos_info(),
         "feature_projects": Git_Project.objects.all().filter(featured=1)[:2],
     }
-
-    for i, project in enumerate(mydict["feature_projects"]):
-        mydict["feature_projects"][i].image.name = (
-            "/static/assets/" + project.image.name
-        )
 
     mydict["github"] = GITHUB_USER
 

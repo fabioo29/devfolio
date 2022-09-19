@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,36 +17,47 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
 
 </head>
+
 <body>
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#"><<span class="brand-font">Fabio Oliveira</span>/></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">
+            <<span class="brand-font">Fabio Oliveira</span>/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><i class="fas fa-bars "></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#portrait"><span class="nav-num">01.</span><span class="nav-text">About</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects"><span class="nav-num">02.</span><span class="nav-text">Portfolio</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact-wrap"><span class="nav-num">03.</span><span class="nav-text">Get in touch</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="https://bit.ly/3tys3tE"><div class="nav-resume">RESUME</div></a></li>
+                <li class="nav-item"><a class="nav-link" href="#portrait"><span class="nav-num">01.</span><span
+                            class="nav-text">About</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects"><span class="nav-num">02.</span><span
+                            class="nav-text">Portfolio</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact-wrap"><span class="nav-num">03.</span><span
+                            class="nav-text">Get in touch</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://bit.ly/3tys3tE">
+                        <div class="nav-resume">RESUME</div>
+                    </a></li>
             </ul>
         </div>
     </nav>
-    
+
     <!-- header -->
     <header>
         <div id="welcome-container">
             <h1 id="hello">HELLO.</h1>
-            <a id="welcome">WELCOME TO MY PORTFOLIO!<img id="hi-gif" src="{% static 'main/assets/hi.gif' %}" alt="hand hellowing"></a>
+            <a id="welcome">WELCOME TO MY PORTFOLIO!<img id="hi-gif" src="{% static 'main/assets/hi.gif' %}"
+                    alt="hand hellowing"></a>
             <p id="animated-text">
-                <span class="animated-text-cls"</span>
+                <span class="animated-text-cls" </span>
             </p>
         </div>
         <div id="portrait-container">
@@ -55,45 +67,47 @@
 
     <!-- projects album -->
     <section class="projects" id="projects">
-        <h3><span class="section-num">02.</span><span class="section-text">Some Things I've Built</span><span class="section-line"></span></h3>
+        <h3><span class="section-num">02.</span><span class="section-text">Some Things I've Built</span><span
+                class="section-line"></span></h3>
         {% for project in feature_projects %}
-            <div class="project-grid">
-                <a href="{{project.url}}" class="color-overlay"></a>
-                <a class="project-img"><img src="{{project.image.name}}" data-scroll-zoom alt="" srcset=""></a>
-                <div class="project-text">
-                    <a class="container-click" href="#"></a>
-                    <p class="project-feature">Featured Project</p>
-                    <h3 class="project-title">{{project.title}}</h3>
-                    <div class="project-desc">{{project.desc}}</div>
-                    <div class="project-tech">
-                        {% for topic in project.topics %}
-                            <span>{{topic}}</span>
-                        {% endfor %}
-                    </div>
+        <div class="project-grid">
+            <a href="{{project.url}}" class="color-overlay"></a>
+            <a class="project-img"><img src="{{project.image}}" data-scroll-zoom alt="" srcset=""></a>
+            <div class="project-text">
+                <a class="container-click" href="#"></a>
+                <p class="project-feature">Featured Project</p>
+                <h3 class="project-title">{{project.title}}</h3>
+                <div class="project-desc">{{project.desc}}</div>
+                <div class="project-tech">
+                    {% for topic in project.topics %}
+                    <span>{{topic}}</span>
+                    {% endfor %}
                 </div>
             </div>
+        </div>
         {% endfor %}
         <p class="github-header">Github Archive</p>
         <ul class="github-projects">
             {% for project in repos_info %}
-                <li class="github-project">
-                    <a href={{project.url}}></a>
-                    <h3 class="project-title">{{project.title}}</h3>
-                    <div class="project-desc">{{project.desc}}</div>
-                    <div class="project-tech">
-                        {% for topic in project.topics %}
-                            <span>{{topic}}</span>
-                        {% endfor %}
-                    </div>
-                </li>
+            <li class="github-project">
+                <a href={{project.url}}></a>
+                <h3 class="project-title">{{project.title}}</h3>
+                <div class="project-desc">{{project.desc}}</div>
+                <div class="project-tech">
+                    {% for topic in project.topics %}
+                    <span>{{topic}}</span>
+                    {% endfor %}
+                </div>
+            </li>
             {% endfor %}
         </ul>
         <a href="https://github.com/{{github}}" class="raise">View more</a>
     </section>
-    
+
     <!-- contact form -->
     <section class="contact-wrap" id="contact-wrap">
-        <h3><span class="section-num">03.</span><span class="section-text">Get In Touch</span><span class="section-line"></span></h3>
+        <h3><span class="section-num">03.</span><span class="section-text">Get In Touch</span><span
+                class="section-line"></span></h3>
         <form method="POST" action="{% url 'index' %}" class="row contact-form">
             {% csrf_token %}
             <div class="col-sm-6">
@@ -160,22 +174,24 @@
         <div class="icon"><span class="iconify" data-inline="false" data-icon="file-icons:assembly-avr"></span></div>
         <div class="icon"><span class="iconify" data-inline="false" data-icon="file-icons:vhdl"></span></div>
         <div class="icon"><span class="iconify" data-inline="false" data-icon="cib:ubuntu"></span></div>
-        <div class="icon"><span class="iconify" data-inline="false" data-icon="mdi:microsoft-visual-studio-code"></span></div>
+        <div class="icon"><span class="iconify" data-inline="false" data-icon="mdi:microsoft-visual-studio-code"></span>
+        </div>
     </div>
 
     <!-- float side links -->
-    <div class ="float-sidebar float-links">
+    <div class="float-sidebar float-links">
         <a href="https://github.com/{{github}}" class="float fab fa-github fa-2x"></a>
         <a href="https://www.linkedin.com/in/fabioo29/" class="float fab fa-linkedin-in fa-2x"></a>
     </div>
-    <div class="float-bar-l"></div> 
+    <div class="float-bar-l"></div>
 
     <!-- float side email -->
-    <div class ="float-sidebar float-email">
+    <div class="float-sidebar float-email">
         <a class="float" href="mailto:fabiodiogo29@gmail.com">fabiodiogo29@gmail.com</a>
     </div>
     <div class="float-bar-r"></div>
 
     <script src="{% static 'main/js/main.js' %}"></script>
 </body>
+
 </html>
